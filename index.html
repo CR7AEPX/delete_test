@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="OUR LIFE — кинематографичная история о любви, взрослении и семье.">
+  <title>OUR LIFE — история, которую вы проживёте</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="OUR LIFE — главная"><span class="brand-mark">O</span><span>OUR <b>LIFE</b><small>EVERY CHOICE BECOMES A MEMORY</small></span></a>
+      <nav class="top-actions">
+        <button class="icon-button" id="searchOpen" aria-label="Поиск" title="Поиск">⌕</button>
+        <button class="icon-button" id="soundToggle" aria-label="Звук" title="Звук">♫</button>
+        <button class="icon-button" id="settingsOpen" aria-label="Настройки" title="Настройки">⚙</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-image"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ИНТЕРАКТИВНАЯ ИСТОРИЯ</div>
+          <h1>OUR<br><em>LIFE</em></h1>
+          <p class="hero-subtitle">Не идеальная сказка. Настоящая жизнь,<br class="desktop-only"> которую вы создаёте вместе.</p>
+          <div class="hero-meta"><span>РОМАНТИКА</span><i></i><span>СЕМЕЙНАЯ ДРАМА</span><i></i><span>ВАШ ВЫБОР</span></div>
+          <div class="hero-buttons">
+            <button class="primary-button" id="startButton"><span>Начать историю</span><b>↗</b></button>
+            <button class="ghost-button" id="continueButton">Продолжить <span>→</span></button>
+          </div>
+          <div class="hero-footnote">ГЛАВА 01 <span>·</span> ПЕРВЫЙ ДЕНЬ</div>
+        </div>
+        <div class="hero-side-note">A STORY ABOUT THE THINGS THAT MATTER</div>
+      </section>
+
+      <section class="content-section intro-grid">
+        <div class="section-kicker">01 / ИСТОРИЯ</div>
+        <div>
+          <h2>Маленькие моменты.<br><em>Большая жизнь.</em></h2>
+          <p class="lead">Всё начинается с одного утра. С чашки кофе, случайного взгляда и вопроса, на который нет готового ответа. Впереди — годы, в которых ваши решения станут частью общей истории.</p>
+        </div>
+        <div class="intro-stat"><strong>01—12</strong><span>ЛЕТ ВАШЕЙ<br>СОВМЕСТНОЙ ИСТОРИИ</span></div>
+      </section>
+
+      <section class="content-section feature-row">
+        <div class="feature-card feature-photo"><div class="feature-overlay"></div><div class="feature-label">01 — БЛИЗОСТЬ</div><h3>Узнавать друг<br>друга заново</h3></div>
+        <div class="feature-copy"><span class="tiny-label">НЕСКОЛЬКО СЛОВ О НАС</span><h2>Любовь — это<br><em>не только начало.</em></h2><p>Это разговоры на кухне в два часа ночи. Усталость, которую вы делите пополам. Умение услышать. Право ошибаться. И тысячи тихих «я рядом».</p><button class="text-button" id="aboutButton">Узнать об истории <span>↗</span></button></div>
+      </section>
+
+      <section class="content-section chapter-section" id="chapters">
+        <div class="section-heading"><div><span class="tiny-label">ПУТЬ ВПЕРЁД</span><h2>Главы <em>жизни</em></h2></div><span class="muted">ИСТОРИЯ РАСТЁТ ВМЕСТЕ С ВАМИ</span></div>
+        <div class="chapter-grid" id="chapterGrid"></div>
+      </section>
+
+      <section class="content-section quote-section">
+        <div class="quote-mark">“</div>
+        <blockquote>Счастье не всегда выглядит как большое событие. Иногда это просто человек, которому хочется рассказать, как прошёл день.</blockquote>
+        <span>— ИЗ ВАШЕЙ БУДУЩЕЙ ИСТОРИИ</span>
+      </section>
+    </main>
+
+    <footer class="footer"><div class="brand footer-brand"><span class="brand-mark">O</span><span>OUR <b>LIFE</b><small>EVERY CHOICE BECOMES A MEMORY</small></span></div><span>ИСТОРИЯ СОЗДАЁТСЯ ВАМИ</span><span>© OUR LIFE · 2026</span></footer>
+  </div>
+
+  <section class="game-screen hidden" id="gameScreen" aria-live="polite">
+    <div class="game-backdrop" id="sceneBackdrop"></div>
+    <div class="game-vignette"></div>
+    <header class="game-top">
+      <button class="round-control" id="backHome" aria-label="В меню">←</button>
+      <div class="game-chapter"><span id="gameChapterNo">ГЛАВА 01</span><b id="gameChapterName">ПЕРВЫЙ ДЕНЬ</b><small id="bondStatus">БЛИЗОСТЬ 0 · ДОВЕРИЕ 0</small></div>
+      <div class="game-tools"><button class="round-control" id="historyOpen" title="История">☷</button><button class="round-control" id="gameSearch" title="Поиск">⌕</button><button class="round-control" id="gameSettings" title="Настройки">⚙</button></div>
+    </header>
+    <div class="character-portrait hidden" id="characterPortrait" aria-hidden="true"></div>
+    <div class="scene-caption" id="sceneCaption"></div>
+    <div class="dialogue-wrap" id="dialogueWrap">
+      <div class="speaker" id="speaker"></div>
+      <div class="dialogue-text" id="dialogueText"></div>
+      <div class="choices" id="choices"></div>
+      <div class="dialogue-footer"><span id="sceneCounter">СЦЕНА 01</span><button id="nextButton" class="next-button">ДАЛЕЕ <b>→</b></button></div>
+    </div>
+    <div class="game-progress"><span id="progressFill"></span></div>
+  </section>
+
+  <div class="modal hidden" id="searchModal" role="dialog" aria-modal="true" aria-label="Поиск по истории">
+    <div class="modal-card search-card"><button class="modal-close" data-close="searchModal">×</button><span class="tiny-label">БЫСТРЫЙ ПОИСК</span><h2>Найти в <em>истории</em></h2><input id="searchInput" type="search" placeholder="Персонаж, глава, событие…"><div id="searchResults" class="search-results"><p class="muted">Начните вводить запрос.</p></div></div>
+  </div>
+  <div class="modal hidden" id="settingsModal" role="dialog" aria-modal="true" aria-label="Настройки">
+    <div class="modal-card"><button class="modal-close" data-close="settingsModal">×</button><span class="tiny-label">ВАШ КОМФОРТ</span><h2>Настройки <em>истории</em></h2>
+      <label class="setting-row">Размер текста <select id="fontSize"><option value="normal">Обычный</option><option value="large">Крупный</option><option value="xl">Очень крупный</option></select></label>
+      <label class="setting-row">Скорость текста <select id="textSpeed"><option value="0">Мгновенно</option><option value="12">Быстро</option><option value="24" selected>Обычно</option><option value="42">Медленно</option></select></label>
+      <label class="setting-row">Контраст <select id="contrast"><option value="normal">Обычный</option><option value="high">Повышенный</option></select></label>
+      <div class="modal-actions"><button class="primary-button" id="saveSettings">Сохранить</button><button class="ghost-button" id="exportSave">Экспорт сохранения</button><label class="ghost-button file-label">Импорт сохранения<input type="file" id="importSave" accept=".json,application/json" hidden></label></div>
+      <p class="micro-note">Сохранения хранятся в этом браузере. Экспортируйте файл, чтобы перенести прогресс на другое устройство.</p>
+    </div>
+  </div>
+  <div class="modal hidden" id="historyModal" role="dialog" aria-modal="true" aria-label="История диалогов"><div class="modal-card"><button class="modal-close" data-close="historyModal">×</button><span class="tiny-label">ВАШИ ВОСПОМИНАНИЯ</span><h2>История <em>разговора</em></h2><div id="historyList" class="history-list"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="js/story.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
